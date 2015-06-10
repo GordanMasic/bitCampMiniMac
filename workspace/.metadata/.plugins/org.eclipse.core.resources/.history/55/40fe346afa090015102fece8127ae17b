@@ -1,0 +1,64 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class BrojPonavljanjaSvakogBroja {
+
+	public static int getInput() {
+		Scanner in = new Scanner(System.in);
+		int number = 0;
+
+		while (true) {
+			try {
+				System.out.println("Unesi broj");
+				number = in.nextInt();
+				break;
+			} catch (InputMismatchException e) {
+				System.out.println("Nije broj!");
+				in.nextLine();
+			}
+		}
+
+		return number;
+		in.close();
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner in2 = new Scanner(System.in);
+		
+		System.out.println("Insert length of an array: ");
+
+		int n = getInput();
+
+		System.out.println("Insert number of inserts: ");
+		int k = getInput();
+
+		int[] array = new int[n];
+
+		while (k > 0) {
+			try {
+				System.out.println("Insert number of index: ");
+				int index = getInput();
+				if (index >= n) {
+					throw new IndexOutOfBoundsException();
+				}
+				System.out
+						.println("Insert value of array element at that index: ");
+				array[index] = in2.nextInt();
+				k--;
+
+			} catch (IndexOutOfBoundsException e1) {
+				System.out.println("Index out of range. Please try again!");
+				
+			}catch (InputMismatchException e) {
+				System.out.println("Please insert a number!");
+				
+				
+			}catch (NegativeArraySizeException e2){
+				System.out.println("Size can't be negative!");
+				
+				
+			}
+		}
+	}
+}

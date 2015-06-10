@@ -1,0 +1,14 @@
+import java.awt.Graphics;
+
+
+public class Rectangles {
+
+	public static void drawRectangles(int n, int m, Graphics g){
+		return g
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

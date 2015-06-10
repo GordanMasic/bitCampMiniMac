@@ -1,0 +1,14 @@
+
+public class CanItBeBinary {
+
+	
+	public static boolean canBeBinary(int number){
+		
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(canBeBinary(25));
+
+	}
+
+}

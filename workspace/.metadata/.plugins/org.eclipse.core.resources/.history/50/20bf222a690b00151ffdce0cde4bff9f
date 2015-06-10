@@ -1,0 +1,22 @@
+
+public class TwoArrays2 {
+
+	public static int[] getArray2(int n,int m){
+		int[] array = new int[n];
+		for (int i = 0; i<n;i++){
+			for ( int j = 0; j< m; j++){
+				array[i]= j;
+				
+			}
+		}
+			
+		return array;
+			
+		}
+	public static void main(String[] args) {
+		System.out.println(getArray2(9, 5));
+		
+
+	}
+
+}

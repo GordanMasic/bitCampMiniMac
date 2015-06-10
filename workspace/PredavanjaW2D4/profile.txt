@@ -1,0 +1,4 @@
+Name:            Gordan
+Email:           gordan.masic@bitcamp.ba
+Favorite Color:  black
+Yearly Income:   $0.00

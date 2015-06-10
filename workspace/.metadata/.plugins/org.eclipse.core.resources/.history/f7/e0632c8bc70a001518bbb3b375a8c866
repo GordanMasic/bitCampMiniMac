@@ -1,0 +1,18 @@
+
+public class VariableType {
+
+	public static String getType(String value){
+		
+		String type = "";
+		if(value.equals(true)||value.equals(false)){
+			type += "boolean";
+		}
+		return type;
+			
+	}
+	public static void main(String[] args) {
+		System.out.println(getType("true"));
+
+	}
+
+}

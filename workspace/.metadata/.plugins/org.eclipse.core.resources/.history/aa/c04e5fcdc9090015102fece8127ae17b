@@ -1,0 +1,14 @@
+
+public class Arrays1 {
+
+	public static void main(String[] args) {
+		
+		int[] prvihPet = new int[] {1, 2, 3, 4, 5};
+			
+			for (int index = 0; index < prvihPet.length; index++){
+				System.out.println(prvihPet[index]);
+			}
+
+	}
+
+}

@@ -1,0 +1,71 @@
+package ba.bitcam.vjezbe.W04d01;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+
+public class MainDrawTree {
+
+	public static void main(String[] args) {
+		DrawWindow w = new DrawWindow();
+		draw(w);
+	}
+
+	public static void drawRectangles(int n, int m, Graphics g) {
+		g.setColor(Color.BLACK);
+		for (int x = 100; x <= m*100; x += 100) {
+			for (int y = 100; y <= n*100; y += 100) {
+				g.drawRect(x, y, 100, 100);
+
+			}
+
+		}
+	
+		
+
+	}
+
+	public static void draw(DrawWindow w) {
+		BufferedImage img = new BufferedImage(1200, 800,
+				BufferedImage.TYPE_INT_ARGB);
+		Graphics g = img.getGraphics();
+		// **** Draw here ****
+		
+		
+		g.setColor(Color.black);
+		/*
+		 * Main tree block
+		 */
+		g.drawRect(335, 100, 150, 30);
+		g.setFont(new Font("Calibri",Font.BOLD,16));
+		g.drawString("API Packages", 350, 120);
+		
+		g.drawLine(375, 130, 375, 150);
+		g.drawLine(125, 150, 1050, 150);
+		
+		g.drawLine(125, 150, 125, 170);
+		/*
+		 * First subtree block 
+		 */
+		g.drawRect(75, 170, 100, 30);
+		g.setFont(new Font("Calibri",Font.PLAIN,16));
+		g.drawString("lang", 100, 190);
+		
+		g.drawLine(230, 150, 230, 170);
+		/*
+		 * Second subtree block
+		 */
+		g.drawRect(180, 170, 100, 30);
+		g.drawString("util", 210, 190);
+		
+		g.drawLine(335, 150, 335, 170);
+		
+		g.drawRect(285, 170, 100, 30);
+		g.drawString("io", 310, 190);
+
+		
+		
+		w.setImage(img);
+	}
+}

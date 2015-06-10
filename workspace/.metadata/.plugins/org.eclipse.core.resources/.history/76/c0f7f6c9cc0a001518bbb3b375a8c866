@@ -1,0 +1,20 @@
+public class CheckGrammary {
+
+	public static String fixSentence(String sentence) {
+
+		String fixed = "";
+		for (int i=0;i<sentence.length();i++){
+		fixed += sentence.substring(0, 1).toUpperCase() + sentence.substring(1);
+		}
+		if (sentence.charAt(sentence.length() - 1) != '.') {
+			fixed += '.';
+		}
+		return fixed;
+	}
+
+	public static void main(String[] args) {
+		fixSentence("Hello");
+
+	}
+
+}

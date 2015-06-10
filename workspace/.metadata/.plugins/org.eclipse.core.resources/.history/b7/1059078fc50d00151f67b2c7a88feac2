@@ -1,0 +1,17 @@
+package ba.bitcamp.W04D01;
+
+public class Sum {
+
+	public static void main(String[] args) {
+		
+		for (String number:args){
+			System.out.println(number);
+		}
+		
+		
+		
+
+	}
+
+	
+}

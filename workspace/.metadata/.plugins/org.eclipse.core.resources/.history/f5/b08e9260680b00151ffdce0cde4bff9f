@@ -1,0 +1,28 @@
+import java.util.Arrays;
+
+
+public class TwoArrays {
+
+	public static int[] getArray(int n,int m){
+		int[] array = new int[10];
+		try{
+			if (n < 0 || n >= array.length){
+				throw new IndexOutOfBoundsException();
+			}else{
+			
+			for (int i = n; n< 10; n++){
+				array[n]=m;
+			}
+			}
+			
+		}catch(IndexOutOfBoundsException ex){
+			System.out.println("IndexOutOfBoundsException");
+		}
+		return array;
+	}
+	public static void main(String[] args) {
+		System.out.println(Arrays.toString(getArray(-1, 1)));
+
+	}
+
+}

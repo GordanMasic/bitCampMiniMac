@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ba.bitcamp.W04D01.HelloWorld&apos; to &apos;printHelloWorld&apos;&#x0A;- Original project: &apos;PredavanjeW4D1&apos;&#x0A;- Original element: &apos;ba.bitcamp.W04D01.HelloWorld&apos;&#x0A;- Renamed element: &apos;ba.bitcamp.W04D01.printHelloWorld&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;HelloWorld&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;ba.bitcamp.W04D01{HelloWorld.java[HelloWorld" matchStrategy="1" name="printHelloWorld" qualified="false" references="true" similarDeclarations="false" stamp="1433748543822" textual="false" version="1.0"/>
+</session>

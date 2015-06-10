@@ -1,0 +1,70 @@
+package ba.bitcamp.gordan;
+
+import java.util.Arrays;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class TicTacToe {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Insert size of field: ");
+		int sizeField = in.nextInt();
+		String[][] fieldXO = ticTacToe(sizeField);
+		print2DArray(fieldXO, 2*sizeField);
+		
+	}
+	/**
+	 * 
+	 * @param sizeField
+	 * @return
+	 */
+	public static String[][] ticTacToe(int sizeField){
+		String [][] field = new String[2*sizeField+1][2*sizeField+1];
+		for (int i = 0; i < field.length; i++) {
+			for (int j = 1; j < field.length; j+=2) {
+				field[j][i]	= "-";
+				field[i][j] = "|";
+				
+			}
+		}
+		
+		for (int i = 0; i < field.length; i+=2) {
+			for (int j = 0; j < field.length; j+=2) {
+				field[i][j] = " ";
+			}
+			
+		}
+		
+		for (int i = 1; i < field.length; i+=2) {
+			for (int j = 0; j < field.length; j++) {
+				field[j][i] = "|";
+				
+			}
+			
+		}
+		return field;
+	}
+	
+	/**
+	 * Prints 2D matrix
+	 * 
+	 * @param array
+	 *            - matrix we want to print
+	 * @param column
+	 *            - number of columns in matrix
+	 * 
+	 * @throws InputMismatchException
+	 */
+	public static void print2DArray(String[][] array, int column) {
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array[i].length; j++) {
+				System.out.print(array[i][j] + "\t");
+
+				if (j == column - 1) {
+					System.out.print("\n");
+				}
+			}
+		}
+	}
+}

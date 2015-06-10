@@ -1,0 +1,16 @@
+
+public class CanItBeBinary {
+
+	
+	public static boolean canBeBinary(int number){
+		int bin = Integer.parseInt(number + "", 2);
+		System.out.println(bin);
+		return false;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(canBeBinary(10));
+
+	}
+
+}

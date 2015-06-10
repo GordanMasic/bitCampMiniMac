@@ -1,0 +1,18 @@
+
+public class TwoArrays {
+
+	public static int[] getArray(int n,int m){
+		try{
+			int[] array = new int[10];
+			for (int i = n; n< 10; n++){
+				
+			}
+			
+		}
+	}
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,0 +1,19 @@
+
+public class CanItBeBinary {
+
+	
+	public static boolean canBeBinary(int number){
+		String num = Integer.toString(number, 10);
+		String num2 = Integer.toBinaryString(number);
+		System.out.println(num + " " + num2);
+		boolean canBe = (Integer.toBinaryString(number) == num)?true:false;
+		return canBe;
+		
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(canBeBinary(101));
+
+	}
+
+}

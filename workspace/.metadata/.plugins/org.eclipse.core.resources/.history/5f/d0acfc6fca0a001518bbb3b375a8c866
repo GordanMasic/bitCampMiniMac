@@ -1,0 +1,22 @@
+
+public class CheckGrammary {
+	
+	public static String fixSentence(String sentence){
+		int l = sentence.length();
+		String fixed = "";
+		char c = sentence.charAt(0);
+		c+=48;
+		fixed += c;System.out.println(fixed);
+		return sentence;
+		
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		fixSentence("sky is blue");
+
+	}
+
+}

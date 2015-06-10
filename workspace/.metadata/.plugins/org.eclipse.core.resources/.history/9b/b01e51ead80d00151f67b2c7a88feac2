@@ -1,0 +1,26 @@
+package ba.bitcam.vjezbe.W04d01;
+
+import java.awt.Font;
+
+public class Task2 {
+
+	public static void main(String[] args) {
+		Font f = new Font("Times New Roman", Font.BOLD, 18);
+		printFontDetails(f);
+
+	}
+/**
+ * Returns details of the font.
+ * 
+ * @param f - font whose details we want to know
+ * 
+ * @exception NullPointerException if value of <b>f</b> is null
+ */
+	public static void printFontDetails(Font f) {
+		System.out.println("Size of font: " + f.getSize());
+		System.out.println("Name of font: " + f.getName());
+		System.out.println("Is BOLD: " + f.isBold());
+		System.out.println("Is ITALIC: " + f.isItalic());
+		System.out.println("Is PLAIN: " + f.isPlain());
+	}
+}

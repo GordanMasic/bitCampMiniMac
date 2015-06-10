@@ -1,0 +1,28 @@
+import java.util.Arrays;
+
+public class GetRandomNumber {
+
+	public static int getRandomNumber(int min, int max) {
+		int[] range = new int[Math.abs(min) + Math.abs(max)+1];
+		int random = 0;
+		if (max > min) {
+			for (int i = 0; i < Math.abs(min) + Math.abs(max)+1; i++) {
+				range[i] = i+min;
+
+			}
+			random = range[(int)(Math.random()*(Math.abs(min) + Math.abs(max)))];
+			
+		}else{
+			return -1;
+		}
+		System.out.println(Arrays.toString(range));
+		return random;
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println(getRandomNumber(0, 2));
+
+	}
+
+}

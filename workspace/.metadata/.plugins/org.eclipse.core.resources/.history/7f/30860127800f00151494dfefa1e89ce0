@@ -1,0 +1,25 @@
+package ba.bitcamp.gordan;
+
+import java.util.Scanner;
+
+public class TicTacToe {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Insert size of field: ");
+		int sizeField = in.nextInt();
+		String[][] fieldXO = ticTacToe(sizeField);
+
+		System.out.println(fieldXO);
+	}
+
+	public static String[][] ticTacToe(int sizeField){
+		String [][] field = new String[2*sizeField][2*sizeField];
+		for (int i = 1; i < field.length; i+=2) {
+			for (int j = 1; j < field.length; j+=2) {
+				field[i][j] = "|";
+			}
+		}
+		return field;
+	}
+}

@@ -1,0 +1,32 @@
+package ba.bitcam.vjezbe.W04d01;
+
+public class Task1 {
+
+	public static void main(String[] args) {
+		System.out.println(getAreaOfSquare(a));
+
+	}
+	/**
+	 * Returns <b><i>area</i></b> of square with the a.
+	 * 
+	 * @param a - length of square page
+	 * 
+	 * @return area - equals to a * a.
+	 * 
+	 * @exception IllegalArgumentException - If argument is negative.
+	 */
+	public static double getAreaOfSquare(double a){
+		double area = 0;
+		try{
+			if (a<0){
+				throw new IllegalArgumentException();
+			}
+			area = a * a;
+		}catch(IllegalArgumentException e){
+			System.out.println("Value of a is wrong");
+			
+		}
+		return area;
+	}
+
+}

@@ -1,0 +1,20 @@
+package ba.bitcam.vjezbe.W04d01;
+
+public class Task3 {
+
+	public static void main(String[] args) {
+		
+		double a = Double.parseDouble(args[0]);
+		double b = Double.parseDouble(args[1]);
+		
+		if(b == 0){
+			throw new ArithmeticException("Can't divide with zero!");
+		}
+		
+		System.out.println(a/b);
+		
+		
+
+	}
+
+}

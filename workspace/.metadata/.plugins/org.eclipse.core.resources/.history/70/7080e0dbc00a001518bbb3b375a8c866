@@ -1,0 +1,25 @@
+public class GetRandomNumber {
+
+	public static int getRandomNumber(int min, int max) {
+		int[] range = new int[Math.abs(min) + Math.abs(max)];
+		int random = 0;
+		if (max > min) {
+			for (int i = min; i <= max; i++) {
+				range[i - min] = i;
+
+			}
+			random = range[(int)(Math.random()*(Math.abs(min) + Math.abs(max)))];
+			
+		}else{
+			return -1;
+		}
+		return random;
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println(getRandomNumber(-1, 4));
+
+	}
+
+}

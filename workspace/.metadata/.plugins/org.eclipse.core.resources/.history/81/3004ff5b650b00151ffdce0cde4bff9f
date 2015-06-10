@@ -1,0 +1,13 @@
+
+public class CompleteWord {
+
+	public static String getTheRest(String word1, String word2){
+		int a = word1.indexOf(word2.charAt(word2.length()-1));
+		return word2.concat(word1.substring(a+1));
+	}
+	public static void main(String[] args) {
+		System.out.println(getTheRest("BitCamp", "Ca"));// = „Camp“
+
+	}
+
+}

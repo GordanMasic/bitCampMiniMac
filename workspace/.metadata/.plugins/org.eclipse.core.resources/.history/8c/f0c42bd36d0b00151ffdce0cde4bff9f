@@ -1,0 +1,31 @@
+import java.util.Arrays;
+
+
+public class ArrayFromFile {
+
+	public static int[] getArray3(String fileName){
+		TextIO.readFile("src/"+fileName);
+		int counter = 0;
+		while (!TextIO.eof()){
+			TextIO.getln();
+			 counter++;
+			 }
+		System.out.println(counter);
+		int i = 0;
+		int[] array = new int[counter];
+		char c =' ';
+		while(!TextIO.eof()){
+			if (i<counter){
+			c = TextIO.getChar();
+			array[i]=c-48;
+			i++;
+			}
+		}
+		return array;
+	}
+	public static void main(String[] args) {
+		System.out.println(Arrays.toString(getArray3("File.in")));
+
+	}
+
+}

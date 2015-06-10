@@ -1,0 +1,54 @@
+package ba.bitcam.vjezbe.W04d01;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+
+public class MainDrawTree {
+
+	public static void main(String[] args) {
+		DrawWindow w = new DrawWindow();
+		draw(w);
+	}
+
+	public static void drawRectangles(int n, int m, Graphics g) {
+		g.setColor(Color.BLACK);
+		for (int x = 100; x <= m*100; x += 100) {
+			for (int y = 100; y <= n*100; y += 100) {
+				g.drawRect(x, y, 100, 100);
+
+			}
+
+		}
+	
+		
+
+	}
+
+	public static void draw(DrawWindow w) {
+		BufferedImage img = new BufferedImage(1200, 800,
+				BufferedImage.TYPE_INT_ARGB);
+		Graphics g = img.getGraphics();
+		// **** Draw here ****
+		
+		
+		g.setColor(Color.black);
+		/*
+		 * First main block
+		 */
+		g.drawRect(500, 100, 150, 30);
+		g.drawString("API Packages", 530, 120);
+		
+		g.drawLine(575, 130, 575, 150);
+		g.drawLine(150, 150, 1050, 150);
+		
+		g.drawLine(150, 150, 150, 170);
+		
+		g.drawRect(75, 170, 150, 30);
+		g.setFont(new Font("Calibri",Font.PLAIN,20));
+		g.drawString("lang", 115, 190);
+		
+		w.setImage(img);
+	}
+}

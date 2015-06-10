@@ -1,0 +1,35 @@
+public class GetRandomNumber {
+
+	public static int getRandomNumber(int num1, int num2) {
+		
+		int range = num1 - num2;
+
+		int number = 0;
+		if (num1 < 0 || num2 < 0) {
+			if (num2 >= num1) {
+				number = (int) (Math.random() * range - Math.abs(num2));
+
+			} else {
+				number = -1;
+			}
+		} else {
+			if (num2 >= num1) {
+				range = num2 - num1+1;
+				number = (int) (Math.random() * range + num1);
+				
+			} else {
+				range = num1 - num2+1;
+				number = -1;
+			}
+		}
+		return number;
+
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println(getRandomNumber(1, -4));
+
+	}
+
+}

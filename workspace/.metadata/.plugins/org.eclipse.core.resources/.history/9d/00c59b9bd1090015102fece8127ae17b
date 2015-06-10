@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+
+public class Arrays1 {
+
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		System.out.print("Unesi max broj elemenata: ");
+		int maxBroj = in.nextInt();
+		if (maxBroj > 0){
+		int[] petBrojeva = new int[maxBroj];
+		
+		
+			
+		
+		for (int i = 0; i < petBrojeva.length;i++){
+			System.out.printf("Unesite %d broj, broj -1 za prestanak: " ,i+1);
+			int broj = in.nextInt();
+			if (broj > 0){
+			petBrojeva[i] = broj;
+			}else{
+				break;
+			}
+		}
+		int max = -1;
+		for(int i = 0; i< petBrojeva.length;i++){
+			int elementNiiza = petBrojeva[i];
+			if(elementNiiza > max){
+				max = elementNiiza;
+			}
+		}
+		System.out.print("Najveci broj je: "+max);
+		in.close();
+		}else{
+			maxBroj = Math.abs(maxBroj);
+			int[] petBrojeva = new int[maxBroj];
+			
+			for (int i = 0; i < petBrojeva.length;i++){
+				System.out.printf("Unesite %d broj: " ,i+1);
+				int broj = in.nextInt();
+				if (broj > 0){
+				petBrojeva[i] = broj;
+				}else{
+					break;
+				}
+			}
+			int max = -1;
+			for(int i = 0; i< petBrojeva.length;i++){
+				int elementNiiza = petBrojeva[i];
+				if(elementNiiza > max){
+					max = elementNiiza;
+				}
+			}
+			System.out.print("Najveci broj je: "+max);
+			in.close();
+		}
+		
+	}
+}

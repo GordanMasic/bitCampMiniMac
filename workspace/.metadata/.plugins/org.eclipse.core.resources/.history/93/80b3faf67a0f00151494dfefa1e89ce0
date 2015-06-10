@@ -1,0 +1,127 @@
+package ba.bitcamp.gordan;
+
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Minesweeper {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		//Asking user to choose dimensions of the field
+		System.out.println("Which level you prefer? (Input number 2 - 10): ");
+		int level = in.nextInt();
+		
+		int[][] matrix = fillRandMatrix(level);
+		print2DArray(matrix, level);
+		in.close();
+	}
+
+	/**
+	 * Returns possible solution of Minesweeper depending of level (dimensions)
+	 * of the field
+	 * 
+	 * @param level	level (dimensions) of the field
+	 * @return solution
+	 */
+	public static int[][] fillRandMatrix(int level) {
+		int[][] matrix = new int[level][level];
+		
+		//Fill matrix with the zeroes
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix.length; j++) {
+				matrix[i][j] = 0;
+			}
+		}
+		
+		//Put -1 on random places
+		for (int i = 0; i < matrix.length; i++) {
+			int j = (int) (Math.random() * (matrix.length));
+			matrix[i][j] = -1;
+		}
+		
+		//For every place in matrix checking how many -1 appears in places around it
+		//Putting that number in that field
+		for (int i = 0; i < matrix.length; i++) {
+
+			for (int j = 0; j < matrix.length; j++) {
+				int counter = 0;
+				if (matrix[i][j] == 0) {
+					if (i - 1 >= 0 && j - 1 >= 0) {
+						if (matrix[i - 1][j - 1] == -1) {
+							counter++;
+						}
+
+					}
+					if (i - 1 >= 0 && j + 1 < matrix.length) {
+						if (matrix[i - 1][j + 1] == -1) {
+							counter++;
+						}
+					}
+					if (i + 1 < matrix.length && j - 1 >= 0) {
+
+						if (matrix[i + 1][j - 1] == -1) {
+							counter++;
+						}
+					}
+
+					if (j - 1 >= 0) {
+						if (matrix[i][j - 1] == -1) {
+							counter++;
+						}
+					}
+
+					if (i - 1 >= 0) {
+						if (matrix[i - 1][j] == -1) {
+							counter++;
+
+						}
+					}
+
+					if (i + 1 < matrix.length) {
+						if (matrix[i + 1][j] == -1) {
+							counter++;
+						}
+					}
+					if (j + 1 < matrix.length) {
+						if (matrix[i][j + 1] == -1) {
+							counter++;
+						}
+					}
+					if (i + 1 < matrix.length && j + 1 < matrix.length) {
+						if (matrix[i + 1][j + 1] == -1) {
+							counter++;
+						}
+					}
+
+					matrix[i][j] = counter;
+				}
+			}
+		}
+		return matrix;
+
+	}
+
+	/**
+	 * Prints 2D matrix
+	 * 
+	 * @param array
+	 *            - matrix we want to print
+	 * @param column
+	 *            - number of columns in matrix
+	 * 
+	 * @throws InputMismatchException
+	 */
+	public static void print2DArray(int[][] array, int column) {
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array[i].length; j++) {
+				System.out.print(array[i][j] + "\t");
+
+				if (j == column - 1) {
+					System.out.print("\n");
+				}
+			}
+		}
+	}
+
+}

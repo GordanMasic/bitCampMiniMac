@@ -1,0 +1,24 @@
+public class GetRandomNumber {
+
+	public static int getRandomNumber(int num1, int num2) {
+		num1 = Math.abs(num1);
+		num2 = Math.abs(num2);
+		if (num2 > num1) {
+			int number = (int) (Math.random() * num2);
+			if (number < num2 || number > num1) {
+				return number;
+			}
+		}else if(num2 < num1){
+			int number = (int) (Math.random() * num1);
+			if (number < num1 || number > num2) {
+				return number;
+		}
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println(getRandomNumber(1, 4));
+
+	}
+
+}

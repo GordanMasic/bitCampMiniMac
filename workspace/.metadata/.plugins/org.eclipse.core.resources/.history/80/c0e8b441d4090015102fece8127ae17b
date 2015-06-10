@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Arrays1 {
+
+	public static void main(String[] args) {
+
+		Scanner in = new Scanner(System.in);
+		System.out.print("Unesi koliko zadnjih elemenata uzimamo u obzir: ");
+		int zadnjih = in.nextInt();
+		// if (maxBroj > 0){
+		int[] petBrojeva = new int[];
+
+		while (true) {
+			int i = 0;
+			int count = 0;
+			System.out.printf("Unesite %d broj, broj -1 za prestanak: ", i + 1);
+			int broj = in.nextInt();
+			if (broj > 0) {
+				petBrojeva[i] = broj;
+				i++;
+				if (i == zadnjih) {
+					i = 0;}
+				
+			} else {
+					break;
+				}
+		}System.out.println(petBrojeva);
+		/*
+		 * for (int i = 0; i < petBrojeva.length;i++){
+		 * 
+		 * } int max = -1; for(int i = 0; i< petBrojeva.length;i++){ int
+		 * elementNiiza = petBrojeva[i]; if(elementNiiza > max){ max =
+		 * elementNiiza; } } System.out.print("Najveci broj je: "+max);
+		 * in.close(); }else{ maxBroj = Math.abs(maxBroj); int[] petBrojeva =
+		 * new int[maxBroj];
+		 * 
+		 * for (int i = 0; i < petBrojeva.length;i++){
+		 * System.out.printf("Unesite %d broj: " ,i+1); int broj = in.nextInt();
+		 * if (broj > 0){ petBrojeva[i] = broj; }else{ break; } } int max = -1;
+		 * for(int i = 0; i< petBrojeva.length;i++){ int elementNiiza =
+		 * petBrojeva[i]; if(elementNiiza > max){ max = elementNiiza; } }
+		 * System.out.print("Najveci broj je: "+max); in.close();
+		 */
+
+	}
+}

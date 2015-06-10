@@ -1,0 +1,19 @@
+package ba.bitcam.vjezbe.W04d01;
+
+public class ThreeGetMax {
+
+	
+	public static void main(String[] args) {
+		System.out.println(getMax(15, 20));
+
+	}
+	public static double getMax(double num1, double num2){
+		double max = 0;
+		if(num1 < num2){
+			max = num2; 
+		}else{
+			max = num1;
+		}
+		return max;
+	}
+}

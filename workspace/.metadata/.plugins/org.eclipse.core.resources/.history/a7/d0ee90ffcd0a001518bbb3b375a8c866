@@ -1,0 +1,29 @@
+public class TextExtension {
+
+	public static String getExtension(String filename) {
+		int l = filename.length();
+		int counter = 0;
+		String extension = "";
+		for (int i = 0; i < l; i++) {
+			counter++;
+			if (filename.charAt(i) == '.') {
+				break;
+			}
+
+		}
+		if (counter == l) {
+			return null;
+		} else {
+			for (int i = counter-1; i < l; i++) {
+				extension += filename.charAt(i);
+			}
+			return extension;
+		}
+	}
+
+	public static void main(String[] args) {
+		System.out.println(getExtension("text"));
+
+	}
+
+}

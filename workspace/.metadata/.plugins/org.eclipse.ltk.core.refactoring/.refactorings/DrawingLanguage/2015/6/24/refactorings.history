@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;DrawWindow.java&apos; to &apos;VjezbeW3D2/src/(default package)&apos;&#x0A;- Original project: &apos;DrawingLanguage&apos;&#x0A;- Destination element: &apos;VjezbeW3D2/src/(default package)&apos;&#x0A;- Original element: &apos;ba.bitcamp.dreamteam.DrawWindow.java&apos;" description="Copy compilation unit" destination="=VjezbeW3D2/src&lt;" element1="/src&lt;ba.bitcamp.dreamteam{DrawWindow.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1433854167192" units="1" version="1.0"/>
+</session>

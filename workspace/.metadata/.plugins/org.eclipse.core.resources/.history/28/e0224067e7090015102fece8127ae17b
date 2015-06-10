@@ -1,0 +1,35 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class ArrayLength {
+
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("Input array length: ");
+		int length = in.nextInt();
+		
+		int[] array = new int[length];
+		int i = 0;
+		while(i < length){
+			System.out.println("Input number: ");
+			array[i] = in.nextInt();
+			i++;
+		}
+		System.out.println("Array = " +Arrays.toString(array));
+		in.close();
+		
+		for(i = 0;i < length;i++){
+			int counter = 0;
+			for(int j = i+1;j < length;j++){
+				if (array[i] == array[j]){
+					counter++;
+				}
+				
+			}
+		}System.out.printf("Number %d is repeated %d times.\n",array[i],counter);
+	}
+
+}

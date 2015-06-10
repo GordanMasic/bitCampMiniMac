@@ -1,0 +1,54 @@
+package ba.bitcamp.gordan;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Arrays2D {
+
+	public static void main(String[] args) {
+		int[][]	matrix =  fillMatrix();
+
+		System.out.println(Arrays.toString(matrix));
+	}
+	/**
+	 * User defines the elements of 2D matrix
+	 * @return matrix - defined by user (int)
+	 */
+	public static int[][] fillMatrix() {
+		Scanner in = new Scanner(System.in);
+		// User defines number of rows
+		System.out.print("Insert number of rows: ");
+		int row = in.nextInt();
+
+		// User defines number of columns
+		System.out.print("Insert number of columns: ");
+		int column = in.nextInt();
+
+		// Creating empty matrix with dimensions rows x columns
+		int[][] matrix = new int[row][column];
+
+		// With loop user inserts numbers in every element of matrix
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix[i].length; j++) {
+				System.out.printf("Insert element at indexes [%d] [%d]: ", i,
+						j, "\n");
+				matrix[i][j] = in.nextInt();
+			}
+		}
+		in.close();
+
+		return matrix;
+	}
+	
+	public static boolean isSingular(int[][] matrix){
+		int determinant;
+		boolean singular = false;
+		
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix.length; j++) {
+				
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,29 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class StringToArray {
+
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("Input some string: ");
+		String str = in.nextLine();
+		int length = str.length();
+		
+		char[] array = new char[length];
+		
+		for(int i = 0; i < length;i++){
+		array[i] = str.charAt(i);
+		}
+		System.out.println("Array is " + Arrays.toString(array));
+		
+		char[] reversedArray = new char[length];
+		
+		for(int i = 0;i < length;i++){
+			reversedArray[i] = array[(length -1)- i];
+		}
+		System.out.println("Reversed array is " + Arrays.toString(reversedArray));
+	}
+
+}

@@ -1,0 +1,31 @@
+
+public class VariableType {
+
+	public static String getType(String st){
+		
+		String value = "";
+		try{
+			Integer.parseInt(st);
+			value = "integer";
+		}catch(NumberFormatException e1){
+			try{
+				Double.parseDouble(st);
+				value = "double";
+			}catch(NumberFormatException e2){
+				try{
+					if (st.equals(true) || st.equals(false)){
+						value = "boolean";
+					}
+				}finally{
+					return value;
+				}
+			}
+		}
+		return value;
+	}
+	public static void main(String[] args) {
+		System.out.println(getType("true"));
+
+	}
+
+}

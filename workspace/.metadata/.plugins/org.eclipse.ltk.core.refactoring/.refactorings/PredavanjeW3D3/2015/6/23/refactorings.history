@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ShufleCards&apos; to &apos;ShuffleCards&apos;&#x0A;- Original project: &apos;PredavanjeW3D3&apos;&#x0A;- Original element: &apos;ShufleCards&apos;&#x0A;- Renamed element: &apos;ShuffleCards&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ShufleCards&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{ShufleCards.java[ShufleCards" matchStrategy="1" name="ShuffleCards" qualified="false" references="true" similarDeclarations="false" stamp="1433327156890" textual="false" version="1.0"/>
+</session>
