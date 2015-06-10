@@ -12,7 +12,10 @@ public class TicTacToe {
 		int sizeField = in.nextInt();
 		String[][] fieldXO = ticTacToe(sizeField);
 		print2DArray(fieldXO, 2 * sizeField);
+		while(true){
 		print2DArray(userPlayX(fieldXO), 2 * sizeField);
+		print2DArray(userPlayO(fieldXO), 2 * sizeField);
+		}
 	}
 
 	/**
@@ -88,6 +91,28 @@ public class TicTacToe {
 		}
 		return array;
 	}
+	
+	public static String[][] userPlayO(String[][] array) {
+		@SuppressWarnings("resource")
+		Scanner in = new Scanner(System.in);
+		while (true) {
+
+			System.out.print("Input row index: ");
+			int x = in.nextInt();
+			System.out.print("Input column index: ");
+			int y = in.nextInt();
+			if (array[x][y].equals(" ")) {
+				array[x][y] = "O";
+				break;
+			} else {
+				System.out.println("It's already used field! Try again!");
+			}
+			
+		}
+		return array;
+	}
+	
+	
 	
 	/**
 	 * Returns column that user chooses
