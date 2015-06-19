@@ -76,7 +76,7 @@ public class TicTacToe {
 		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
 		while (true) {
-
+			System.out.println("Player one is on the move!");
 			System.out.print("Input row index: ");
 			int x = in.nextInt();
 			System.out.print("Input column index: ");
@@ -96,7 +96,7 @@ public class TicTacToe {
 		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
 		while (true) {
-
+			System.out.println("Player two is on the move!");
 			System.out.print("Input row index: ");
 			int x = in.nextInt();
 			System.out.print("Input column index: ");
