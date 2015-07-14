@@ -1,0 +1,22 @@
+package ba.bitcamp.ArrayList;
+
+public class Song {
+
+	public static final int DZIGARA = 1;
+	public static final int ROCK = 2;
+	public static final int POP = 3;
+	
+	private String name;
+	private String author;
+	private int year;
+	private int genre;
+	
+	public Song(String name, String author, int year, int genre){
+		this.name=name;
+		this.author=author;
+		this.year = year;
+		this.genre = genre;
+	}
+	
+	
+}

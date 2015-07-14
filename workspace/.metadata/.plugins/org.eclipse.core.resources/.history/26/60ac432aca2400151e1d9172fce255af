@@ -1,0 +1,15 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		DynamicDouble d = new DynamicDouble(8);
+		double[] x = {5.3,4.8,7.6,8.8,4.5,9.5,74.12};
+		
+		d.addElement(5.2);
+		d.addElement(x);
+		System.out.println(d);
+
+	}
+
+}

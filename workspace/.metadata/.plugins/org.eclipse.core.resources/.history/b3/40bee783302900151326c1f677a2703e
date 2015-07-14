@@ -1,0 +1,44 @@
+public class Trip {
+
+	private Place from;
+	private Place to;
+
+	/**
+	 * Constructor for creating Trip objects
+	 * 
+	 * @param from
+	 *            initializing variable from
+	 * @param to
+	 *            initializing variable to
+	 */
+	public Trip(Place from, Place to) {
+		this.from = from;
+		this.to = to;
+	}
+
+	public Trip(String name1, String name2){
+		this.from.name = name1;
+		this.to.name = name2;
+	}
+	
+	// Getters and setters
+	public Place getFrom() {
+		return from;
+	}
+
+	public Place getTo() {
+		return to;
+	}
+
+	public void setFrom(Place from) {
+		this.from = from;
+	}
+
+	public void setTo(Place to) {
+		this.to = to;
+	}
+
+	public String toString(){
+		return String.format("Trip from %s to %d", from.getName(),to.getName());
+	}
+}

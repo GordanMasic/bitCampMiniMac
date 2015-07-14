@@ -1,0 +1,80 @@
+package ba.bitcampLinkedLists;
+
+public class SongLinked {
+
+	public static final int DZIGARA = 1;
+	public static final int ROCK = 2;
+	public static final int POP = 3;
+	
+	private String name;
+	private String author;
+	private int year;
+	private int genre;
+	private SongLinked next;
+	
+	//Constructor
+	public SongLinked(String name, String author, int year, int genre){
+		this.name=name;
+		this.author=author;
+		this.year = year;
+		this.genre = genre;
+	}
+	
+	//Equals
+	public boolean equals(SongLinked other){
+		if(this.name.equals(other.name) && this.author.equals(other.author) && this.year == other.year && this.genre == other.genre){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	//toString
+	public String toString(){
+		return "Song tittle: "+ name + " Author: " + author + " Year: " + year; 
+	}
+
+	//Getters and setters
+	public String getName() {
+		return name;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public int getGenre() {
+		return genre;
+	}
+
+	public SongLinked getNext() {
+		return next;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public void setGenre(int genre) {
+		this.genre = genre;
+	}
+
+	public void setNext(SongLinked next) {
+		this.next = next;
+	}
+	
+	
+	
+}

@@ -1,0 +1,12 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		DynamicDouble d = new DynamicDouble(8);
+		
+		System.out.println(d);
+
+	}
+
+}

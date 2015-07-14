@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;ba.bitcamp.vjezbeW6D3.Main.java&apos; to &apos;Task1.java&apos;&#x0A;- Original project: &apos;VjezbeW6D3&apos;&#x0A;- Original element: &apos;ba.bitcamp.vjezbeW6D3.Main.java&apos;&#x0A;- Renamed element: &apos;ba.bitcamp.vjezbeW6D3.Task1.java&apos;" description="Rename compilation unit &apos;Main.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;ba.bitcamp.vjezbeW6D3{Main.java" name="Task1.java" references="false" stamp="1435148316222" version="1.0"/>
+</session>

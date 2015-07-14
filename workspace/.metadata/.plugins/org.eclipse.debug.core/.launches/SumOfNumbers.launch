@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/VjezbeW7D3/src/ba/bitcamp/task04/SumOfNumbers.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="ba.bitcamp.task04.SumOfNumbers"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="VjezbeW7D3"/>
+</launchConfiguration>

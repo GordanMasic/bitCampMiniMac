@@ -1,0 +1,51 @@
+package ba.bitcamp.IntegerToDay;
+
+
+import java.util.ArrayList;
+
+public class Task1 {
+
+	public static String dayNum(int num){
+		try{
+		ArrayList<String> days = new ArrayList<String>();
+		days.add("Monday");
+		days.add("Tuesday");
+		days.add("Wednesday");
+		days.add("Thursday");
+		days.add("Friday");
+		days.add("Saturday");
+		days.add("Sunday");
+		return days.get(num-1);
+		}catch(IndexOutOfBoundsException e){
+			System.out.println("Wrong input!");
+			return null;
+		}
+		
+	}
+	
+	private static String dayNumArray(int num){
+		try{
+			String[] days = new String[7];
+			days[0] = "Monday";
+			days[0] = "Tuesday";
+			days[0] = "Wednesday";
+			days[0] = "Thursday";
+			days[0] = "Friday";
+			days[0] = "Saturday";
+			days[0] = "Sunday";
+			return days[num-1];
+		}catch(IndexOutOfBoundsException e){
+			System.out.println("Wrong input!");
+			return null;
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		int num = 1;
+		System.out.println(dayNum(num));
+		System.out.println(dayNumArray(num));
+
+	}
+
+}

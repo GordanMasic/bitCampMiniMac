@@ -1,0 +1,30 @@
+package ba.bitcamp.Stacks;
+
+import java.util.Arrays;
+
+public class StringArrayStack {
+
+	private String[] array;
+
+	public StringArrayStack() {
+		this.array = new String[0];
+	}
+
+	public String push(String s) {
+		array = Arrays.copyOf(array, array.length + 1);
+		array[array.length - 1] = s;
+		return s;
+
+	}
+
+	public String pop() {
+		String s = array[array.length - 1];
+		array = Arrays.copyOf(array, array.length - 1);
+		return s;
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;MatrixHelper.java&apos; to &apos;VjezbeW4D4/src/ba.bitcamp.gordan&apos;&#x0A;- Original project: &apos;PredavanjeW4D3&apos;&#x0A;- Destination element: &apos;VjezbeW4D4/src/ba.bitcamp.gordan&apos;&#x0A;- Original element: &apos;ba.bitcamp.gordan.MatrixHelper.java&apos;" description="Copy compilation unit" destination="=VjezbeW4D4/src&lt;ba.bitcamp.gordan" element1="/src&lt;ba.bitcamp.gordan{MatrixHelper.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1434021850208" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("What's the name of place you are currently staying at? ");
+		Place from = new Place(in.nextLine());
+		System.out.println("Where do you want to go? ");
+		Place to = new Place(in.nextLine());
+		in.close();
+		Trip holidayTrip = new Trip(from, to);
+		
+		System.out.println();
+		System.out.println("You want this trip "+holidayTrip.toString());
+		
+
+	}
+
+}

@@ -1,0 +1,80 @@
+package ba.bitcampLinkedLists;
+
+import ba.bitcamp.ArrayList.Song;
+
+public class SongLinked {
+
+	private Node start;
+
+	public SongLinked() {
+		start = null;
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	@Override
+	public String toString() {
+		if (start == null) {
+			return "The list is empty";
+		}
+		
+		return start.toString();
+	}
+	
+	public boolean equals(SongLinked other) {		
+		if(this.start.equals(other.start)){
+			return true;
+		}
+		return false;
+	}
+	
+	
+	private class Node {
+		private Song song;
+		private Node next;
+
+		public Node(Song song) {
+			this.song = song;
+		}
+
+		public Song getValue() {
+			return song;
+		}
+
+		public Node getNextNode() {
+			return next;
+		}
+
+		public void setNextNode(Node next) {
+			this.next = next;
+		}
+
+		@Override
+		public String toString() {
+			if (next == null) {
+				return song.toString();
+			}
+
+			return song.toString() + " " + next.toString();
+		}
+		
+		public boolean equals(Node other){
+			if(this.song.equals(other.song) && this.next.equals(other.next)){
+				return true;
+			}else{
+				return false;
+			}
+		}
+	}
+}

@@ -1,0 +1,91 @@
+package ba.bitcamp.Stacks;
+
+public class StringLinkedListStack {
+
+	private Node start;
+
+	public StringLinkedListStack() {
+		this.start = null;
+	}
+
+	public String push(String word) {
+		if (start == null) {
+			start = new Node(word);
+		} else {
+			Node temp = start;
+			while(temp.next != null){
+				temp = temp.next;
+			}
+			temp.next = new Node(word);
+			temp.next.previous = temp;
+		}
+		return word;
+	}
+
+	public String pop() {
+		if (start == null) {
+			return null;
+		} else {
+			Node temp = start;
+			while (temp.next != null) {
+				temp = temp.next;
+			}
+			String s = temp.word;
+			temp.previous.next = null;
+			return s;
+		}
+	}
+	
+	
+	public boolean isEmpty(){
+		return start == null;
+	}
+	
+	public String peek(){
+		if(start == null){
+			return null;
+		}else{
+			Node temp = start;
+			while(temp.next != null){
+				temp = temp.next;
+			}
+			return temp.word;
+		}
+	}
+	
+	public String toString() {
+		return start.toString();
+	}
+
+	private class Node {
+
+		String word;
+		Node next;
+		Node previous;
+
+		public Node(String word) {
+			this.word = word;
+		}
+
+		public String toString() {
+			return word + next.toString();
+		}
+
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		StringLinkedListStack stack = new StringLinkedListStack();
+		
+		System.out.println(stack.isEmpty());
+		for (int i = 0; i < 10; i++) {
+			stack.push("" + i);
+		}
+		System.out.println(stack.isEmpty());
+		System.out.println(stack);
+		System.out.println(stack.pop());
+		System.out.println(stack);
+		System.out.println(stack.peek());
+	}
+}

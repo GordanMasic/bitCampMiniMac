@@ -1,0 +1,63 @@
+package ba.bitcamp.bookClass.main;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import ba.bitcamp.bookClass.Book;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		ArrayList<Book> books = new ArrayList<Book>();
+
+		for (int i = 0; i < 6; i++) {
+			books.add(new Book());
+		}
+
+		books.set(0, new Book("The Lion, the Witch and the Wardrobe",
+				"C.S. Lewis", 1950));
+		books.set(1, new Book("The DaVinci code", "Dan Brown", 2003));
+		books.set(2, new Book("Think and grow rich", "Napoleon Hill", 1937));
+		books.set(4, new Book("The Alchemist"));
+		books.set(3, new Book("Harry Potter and half/blooded prince"));
+		books.add(new Book("The catcher in the rye", "J.D. Salinger", 1951));
+
+		System.out.println(books.toString());
+
+		Book[] booksArray = new Book[5];
+
+		booksArray[0] = new Book("The Lion, the Witch and the Wardrobe",
+				"C.S. Lewis", 1950);
+		booksArray[1] = new Book("The DaVinci code", "Dan Brown", 2003);
+		booksArray[2] = new Book("Think and grow rich", "Napoleon Hill", 1937);
+		booksArray[3] = new Book("Harry Potter and half/blooded prince");
+		booksArray[4] = new Book("The Alchemist");
+		
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
+		shift(books);
+		System.out.println(books.toString());
+		
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
+		System.out.println(Arrays.toString(booksArray));
+		
+		
+	}
+
+	public static void shift(ArrayList<Book> list){
+		
+		for (int i = list.size()-1; i > 0; i--) {
+			list.set(i, list.get(i-1));
+		}
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;northPanel&apos; in &apos;Frame2.Frame2()&apos; to &apos;centerPanel&apos;&#x0A;- Original project: &apos;VjezbeW7D4&apos;&#x0A;- Original element: &apos;Frame2.Frame2().northPanel&apos;&#x0A;- Renamed element: &apos;northPanel&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;northPanel&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{Frame2.java[Frame2~Frame2@northPanel!303!335!310!319!QJPanel;!0!false" name="centerPanel" references="true" stamp="1435839461263" version="1.0"/>
+</session>

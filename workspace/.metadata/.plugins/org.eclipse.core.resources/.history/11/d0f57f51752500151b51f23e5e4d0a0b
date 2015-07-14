@@ -1,0 +1,31 @@
+package ba.bitcamp.anArrayOfFonts;
+
+import java.awt.Font;
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Task6 extends JFrame{
+
+	private Font[] fonts = new Font[40];
+	private JLabel[] label = new JLabel[40];
+	public Task6(){
+		setLayout(new GridLayout(5, 8));
+		
+		
+		for (int i = 10; i < fonts.length+10; i++) {
+			fonts[i-10] = new Font("Serif", Font.PLAIN, i);
+			label[i-10].setFont(fonts[i-10]);
+			label[i-10].setText("A");
+			add(label[i-10]);
+		}
+		
+		
+		setTitle("An array of Fonts");
+		setSize(800, 600);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+}

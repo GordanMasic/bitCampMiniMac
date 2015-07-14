@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/VjezbeW5D2/src/ba/bitcamp/task02/vjezbeW5D2/GlassMAin.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="ba.bitcamp.task02.vjezbeW5D2.GlassMAin"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="VjezbeW5D2"/>
+</launchConfiguration>

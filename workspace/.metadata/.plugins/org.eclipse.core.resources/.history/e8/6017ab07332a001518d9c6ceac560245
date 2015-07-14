@@ -1,0 +1,46 @@
+package ba.bitcamp.Stacks;
+
+public class StringLinkedListStack {
+
+	private Node start;
+
+	public StringLinkedListStack() {
+		this.start = null;
+	}
+
+	public String push(String word) {
+		if (start == null) {
+			start = new Node(word);
+		} else {
+			start.next = new Node(word);
+		}
+		return word;
+	}
+
+	public String pop() {
+		if (start == null) {
+			return null;
+		} else {
+			Node tmp = start;
+			while (tmp.next != null) {
+
+			}
+		}
+	}
+
+	private class Node {
+
+		String word;
+		Node next;
+		Node previous;
+
+		public Node(String word) {
+			this.word = word;
+		}
+
+		public String toString() {
+			return word + " " + next.toString();
+		}
+
+	}
+}

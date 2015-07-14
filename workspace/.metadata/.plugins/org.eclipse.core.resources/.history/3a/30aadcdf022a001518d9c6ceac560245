@@ -1,0 +1,105 @@
+public class NumberLinkedList {
+
+	private Node start;
+
+	public NumberLinkedList() {
+		this.start = null;
+	}
+
+	public void add(int number) {
+		if (start == null) {
+			start = new Node(number);
+		} else {
+			Node last = getLastNode();
+			last.setNext(new Node(number));
+		}
+	}
+
+	public Node getLastNode() {
+		Node temp = start;
+		while (temp.getNext() != null) {
+			temp = temp.getNext();
+		}
+		return temp;
+	}
+
+	public void remove(int index) {
+		Node temp = start;
+
+		for (int i = 0; i < index; i++) {
+			temp = temp.getNext();
+		}
+
+		Node previous = getPreviousNode(temp);
+
+		previous.setNext(temp.getNext());
+
+	}
+	
+	public void addFirst(int number){
+		if(start == null){
+			start = new Node(number);
+		}
+		Node first = new Node(number);
+		first.setNext(start);
+		start = first;
+	}
+	
+	public void removeLast(){
+		Node temp = start;
+		while(temp.getNext() != null){
+			temp = temp.getNext();
+		}
+		Node previous = getPreviousNode(temp);
+		previous.setNext(null);
+	}
+
+	public Node getPreviousNode(Node n) {
+		if (n == start) {
+			return null;
+		}
+
+		Node temp = start;
+		while (temp.getNext() != n) {
+			temp = temp.getNext();
+		}
+
+		return temp;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("NumberLinkedList [start=%s]", start);
+	}
+
+	private class Node {
+		private int number;
+		private Node next;
+
+		public Node(int number) {
+			this.number = number;
+		}
+
+		public int getNumber() {
+			return number;
+		}
+
+		public Node getNext() {
+			return next;
+		}
+
+		public void setNumber(int number) {
+			this.number = number;
+		}
+
+		public void setNext(Node next) {
+			this.next = next;
+		}
+
+		@Override
+		public String toString() {
+			return String.format("Node [number=%s, next=%s]", number, next);
+		}
+
+	}
+}

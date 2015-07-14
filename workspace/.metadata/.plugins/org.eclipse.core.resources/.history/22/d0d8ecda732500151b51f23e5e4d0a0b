@@ -1,0 +1,18 @@
+package ba.bitcamp.aToZ;
+
+import java.util.Arrays;
+
+import javax.naming.ldap.SortControl;
+
+public class Task5 {
+
+	public static void sortStrings(String...strings){
+		Arrays.sort(strings);
+		System.out.println(Arrays.toString(strings));
+	}
+	
+	
+	public static void main(String[] args) {
+		sortStrings("java","doc","bla bla","sjdakl","sdas","gfdsg","ghdfsg");
+	}
+}

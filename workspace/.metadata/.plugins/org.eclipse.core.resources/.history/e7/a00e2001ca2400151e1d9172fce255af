@@ -1,0 +1,64 @@
+
+public class DynamicDouble {
+
+	private double myArray[];
+	private int count;
+	
+	public DynamicDouble(){
+		this(8);
+	}
+	
+	public DynamicDouble(int n){
+		this(n,0.0);
+		count = 0;
+		
+	}
+	public DynamicDouble(int n,double x){
+		super();
+		count = n;
+		this.myArray = new double[n];
+		for (int i = 0; i < n; i++) {
+			myArray[i] = x;
+		}
+		
+		
+	
+	}
+	public void addElement(double x){
+		if(count >= myArray.length){
+			double tmp[] = myArray;
+			myArray = new double[myArray.length];
+			for (int i = 0; i < tmp.length; i++) {
+				myArray[i] = tmp[i];
+			}
+		}
+		myArray[count] = x;
+			count++;
+	}
+	public void addElement(double[] x){
+		for (int i = 0; i < x.length; i++) {
+			addElement(x[i]);	
+		}
+	}
+	
+	public int size(){
+		return count;
+	}
+	
+	public int totalSize(){
+		return myArray.length;
+	}
+	
+	public String toString(){
+		String s = size() + "\t[ ";
+		for (int i = 0; i < count; i++) {
+			s += myArray[i] + ", ";
+		}
+		s += "]\n" + totalSize() + "\t[ ";
+		for (int i = 0; i < myArray.length; i++) {
+			s+= myArray[i] + ",";
+		}
+		s+= "]";
+		return s;
+	}
+}

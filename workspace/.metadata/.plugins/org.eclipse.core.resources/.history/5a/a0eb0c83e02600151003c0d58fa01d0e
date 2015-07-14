@@ -1,0 +1,132 @@
+package ba.bitcamp.vjezbeW8D4;
+
+import java.util.ArrayList;
+
+public class Firm {
+
+	private ArrayList<Employee> developers;
+
+	public Firm() {
+		this.developers = new ArrayList<Employee>();
+	}
+
+	public void hireEmployee(Employee employee) {
+		for (int i = 0; i < developers.size(); i++) {
+			if (employee.equals(developers.get(i))) {
+				System.out.println("That person is already hired!");
+			}
+		}
+		developers.add(employee);
+	}
+
+	public void fireEmployee(Employee employee) {
+		for (int i = 0; i < developers.size(); i++) {
+			if (!employee.equals(developers.get(i))) {
+				System.out.println("That person doesn't work here at all!");
+			}
+		}
+		developers.remove(employee);
+	}
+
+	public boolean isWorkingHere(Employee employee) {
+		for (int i = 0; i < developers.size(); i++) {
+			if (employee.equals(developers.get(i))) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public boolean hasFemaleEmployees() {
+		for (int i = 0; i < developers.size(); i++) {
+			if (developers.get(i).getGender().equals("Female")) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public void sortIDByUsingSelectionSort() {
+		for (int i = 0; i < developers.size() - 1; i++) {
+			int minIndex = findSmallestElementInRange(developers, i);
+
+			Employee temp = developers.get(i);
+			developers.set(i, developers.get(minIndex));
+			developers.set(minIndex, temp);
+		}
+	}
+
+	private int findSmallestElementInRange(ArrayList<Employee> developers2,
+			int i) {
+		int minIndex = i;
+		for (int j = i; j < developers.size(); j++) {
+			if (developers.get(j).getiD() < developers.get(minIndex).getiD()) {
+				minIndex = j;
+			}
+		}
+		return minIndex;
+
+	}
+
+	public void sortAgeByUsingSelectionSort() {
+		for (int i = 0; i < developers.size() - 1; i++) {
+			int ageIndex = findLowestAge(developers, i);
+			Employee temp = developers.get(i);
+			developers.set(i, developers.get(ageIndex));
+			developers.set(ageIndex, temp);
+		}
+	}
+
+	private int findLowestAge(ArrayList<Employee> developers2, int i) {
+		int ageIndex = i;
+		for (int j = 0; j < developers.size(); j++) {
+			if (developers.get(j).getBirth().getYear() >= developers
+					.get(ageIndex).getBirth().getYear()) {
+				if (developers.get(j).getBirth().getMonth() >= developers
+						.get(ageIndex).getBirth().getMonth()) {
+					if (developers.get(j).getBirth().getDay() >= developers
+							.get(ageIndex).getBirth().getDay()) {
+						ageIndex = j;
+					}
+				}
+			}
+		}
+		return ageIndex;
+	}
+
+	public void sortSalaryByUsingInsertionSort() {
+
+		for (int i = 1; i < developers.size(); i++) {
+			Employee temp = developers.get(i);
+
+			int j;
+			for (j = i - 1; j >= 0; j--) {
+				if (developers.get(j).getSalary() <= temp.getSalary()) {
+					break;
+				}
+
+				developers.set(j + 1, developers.get(j));
+			}
+
+			developers.set(j + 1, temp);
+		}
+	}
+
+	public void sortGenderByUsingInsertionSort() {
+
+		for (int i = 1; i < developers.size(); i++) {
+			Employee temp = developers.get(i);
+
+			int j;
+			for (j = i - 1; j >= 0; j--) {
+				if (developers.get(j).getGender().equals("Female")) {
+					break;
+				}
+
+				developers.set(j + 1, developers.get(j));
+			}
+
+			developers.set(j + 1, temp);
+		}
+	}
+}

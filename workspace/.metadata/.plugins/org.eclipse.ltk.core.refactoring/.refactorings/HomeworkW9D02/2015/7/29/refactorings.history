@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;ba.bitcamp.homework21.LinkedListDouble.removeLast()&apos; to &apos;deleteLast&apos;&#x0A;- Original project: &apos;HomeworkW9D02&apos;&#x0A;- Original element: &apos;ba.bitcamp.homework21.LinkedListDouble.removeLast()&apos;&#x0A;- Renamed element: &apos;ba.bitcamp.homework21.LinkedListDouble.deleteLast()&apos;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;removeLast&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;ba.bitcamp.homework21{LinkedListDouble.java[LinkedListDouble~removeLast" name="deleteLast" references="true" stamp="1436867137411" version="1.0"/>
+</session>

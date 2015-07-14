@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Trip {
+
+	ArrayList<Place> trip;
+	
+	
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		Trip journey = new Trip();
+		Place start = null;
+		
+		System.out.println("Unesite imena gradova koje zelit obici: ");
+		
+		while(true){
+			String name = in.nextLine();
+			if(name!= null){
+				Place newPlace = new Place(name);
+				
+				if(start == null){
+					start = newPlace;
+				}else{
+					journey.trip.add(newPlace);
+				}
+			}else{
+				break;
+			}
+		}
+		
+		System.out.println("Vase putovanje ima slijedece destinacije: "+journey.toString());
+	}
+}

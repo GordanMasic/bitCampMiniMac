@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;j&apos; in &apos;ba.bitcampLinkedLists.SongLinked.SongLinked(...)&apos; to &apos;i&apos;&#x0A;- Original project: &apos;VjezbeW9D1&apos;&#x0A;- Original element: &apos;ba.bitcampLinkedLists.SongLinked.SongLinked(Song[]).j&apos;&#x0A;- Renamed element: &apos;j&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;j&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;ba.bitcampLinkedLists{SongLinked.java[SongLinked~SongLinked~\[QSong;@j!219!227!223!223!I!0!false" name="i" references="true" stamp="1436797129276" version="1.0"/>
+</session>

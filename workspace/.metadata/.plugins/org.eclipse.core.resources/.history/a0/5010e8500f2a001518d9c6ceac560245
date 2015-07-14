@@ -1,0 +1,137 @@
+package ba.bitcamp.homework21;
+
+public class LinkedListDouble {
+
+	// Start node
+	private Node start;
+
+	/**
+	 * Empty constructor
+	 */
+	public LinkedListDouble() {
+		this.start = null;
+	}
+
+	/**
+	 * Constructor for creating LinkedListDouble objects by using other
+	 * LinkedListDouble objects (something like copying one into other).
+	 * 
+	 * @param other
+	 *            other LinkedListDouble object
+	 */
+	public LinkedListDouble(LinkedListDouble other) {
+		this.start = other.start;
+	}
+
+	/**
+	 * Adding new double number into linked list of double numbers
+	 * 
+	 * @param number
+	 *            new number
+	 */
+	public void add(double number) {
+		if (start == null) {
+			start = new Node(number);
+		} else {
+			Node last = getLastNode();
+			last.setNext(new Node(number));
+		}
+	}
+
+	public Node getLastNode() {
+		Node temp = start;
+		while (temp.getNext() != null) {
+			temp = temp.getNext();
+		}
+		return temp;
+	}
+
+	public void remove(int index) {
+
+		if (index == 0) {
+			start = start.getNext();
+		} else {
+			Node temp = start;
+
+			for (int i = 0; i < index; i++) {
+				temp = temp.getNext();
+			}
+
+			Node previous = getPreviousNode(temp);
+
+			previous.setNext(temp.getNext());
+		}
+	}
+
+	public void remove(Node n) {
+		Node temp = start;
+		int index = 0;
+		while (temp.getNext() != n) {
+			index++;
+		}
+
+		remove(index + 1);
+	}
+
+	public void deleteFirst() {
+		start = start.getNext();
+	}
+
+	public void deleteLast() {
+		Node temp = start;
+		while (temp.getNext() != null) {
+			temp = temp.getNext();
+		}
+		Node previous = getPreviousNode(temp);
+		previous.setNext(null);
+	}
+
+	public Node getPreviousNode(Node n) {
+		if (n == start) {
+			return null;
+		}
+
+		Node temp = start;
+		while (temp.getNext() != n) {
+			temp = temp.getNext();
+		}
+
+		return temp;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("%s", start);
+	}
+
+	private class Node {
+		private double number;
+		private Node next;
+
+		public Node(double number) {
+			this.number = number;
+		}
+
+		public double getNumber() {
+			return number;
+		}
+
+		public Node getNext() {
+			return next;
+		}
+
+		public void setNumber(double number) {
+			this.number = number;
+		}
+
+		public void setNext(Node next) {
+			this.next = next;
+		}
+
+		@Override
+		public String toString() {
+			return String.format("%s, %s", number, next);
+		}
+
+	}
+}

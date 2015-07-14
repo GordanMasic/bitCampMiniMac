@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Trip {
+
+	private ArrayList<Place> trip;
+	
+	
+	public void addPlace(Place e){
+		this.trip.add(e);
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("Unesite pocetnu destinaciju: ");
+		Place start = new Place(in.nextLine());
+		Trip holidayTrip = new Trip();
+		System.out.println("Unesite imena gradova koje zelit obici: ");
+		Place last = start;
+		while(true){
+			String name = in.nextLine();
+			if(!name.equals("")){
+				Place newPlace = new Place(name);
+				last.setNext(newPlace);	
+			}else{
+				break;
+			}
+		}
+		
+	
+	Place currentPlace = start;
+	while(currentPlace != null){
+		holidayTrip.addPlace(currentPlace);
+		currentPlace = currentPlace.getNext();
+	}
+	
+		System.out.println("Vase putovanje ima slijedece destinacije: "
+				+ holidayTrip.toString());	
+	
+	}
+}

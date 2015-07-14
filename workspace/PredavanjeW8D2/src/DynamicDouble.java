@@ -1,0 +1,83 @@
+import java.util.Arrays;
+
+
+public class DynamicDouble {
+
+	private double myArray[];
+	private int count;
+	
+	public DynamicDouble(){
+		this(8);
+	}
+	
+	public DynamicDouble(int n){
+		this(n,0.0);
+		count = 0;
+		
+	}
+	public DynamicDouble(int n, double value) {
+        this.myArray = new double[n];
+        this.count = n;
+        Arrays.fill(this.myArray, value);
+}
+		
+		
+	
+
+	public void addElement(double x){
+		if(count >= myArray.length){
+			double tmp[] = myArray;
+			myArray = new double[myArray.length];
+			for (int i = 0; i < tmp.length; i++) {
+				myArray[i] = tmp[i];
+			}
+		}else{
+		myArray[count] = x;
+			count++;
+		}
+	}
+	public void addElement(double[] x){
+		for (int i = 0; i < x.length; i++) {
+			addElement(x[i]);	
+		}
+	}
+	
+	public int size(){
+		return count;
+	}
+	
+	public int totalSize(){
+		return myArray.length;
+	}
+	
+	public String toString(){
+		String s = size() + "\t[ ";
+		for (int i = 0; i < count; i++) {
+			s += myArray[i] + ", ";
+		}
+		s += "]\n" + totalSize() + "\t[ ";
+		for (int i = 0; i < myArray.length; i++) {
+			s+= myArray[i] + ", ";
+		}
+		s+= "]";
+		return s;
+	}
+	
+	public void removeQuick(int offset)throws IndexOutOfBoundsException{
+		if(count == 0) throw new IndexOutOfBoundsException();
+		if(offset >= count) throw new IndexOutOfBoundsException();
+		myArray[offset] = myArray[count-1];
+		count--;
+		if(count <= myArray.length/3){
+			double tmp[] =new double[totalSize()/2];
+			for (int i = 0; i < tmp.length; i++) {
+				tmp[i] = myArray[i];
+			}
+			myArray = tmp;
+		}
+	}
+	
+	public void removeSlow(){
+		
+	}
+}

@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.Random;
+
+
+public class Lists {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> a = new ArrayList<Integer>();
+		for (int i = 0; i < 5; i++) {
+			Random rand = new Random();
+			a.add(rand.nextInt(5));
+		}
+		
+		System.out.println(a.toString());
+		removeAll(2, a);
+		System.out.println(a.toString());
+		reverseAll(a);
+		System.out.println(a.toString());
+	}
+
+	public static void removeAll(int num, ArrayList<Integer> arrayList){
+		while(arrayList.indexOf(num)!=-1){
+			arrayList.remove((Integer)num);
+		}
+	}
+	
+	public static void reverseAll(ArrayList<Integer> arrayList){
+		ArrayList<Integer> arr = new ArrayList<Integer>();
+		for (int i = 0; i < arrayList.size(); i++) {
+			arr.add(arrayList.get(arrayList.size()-i));		
+		}
+		arrayList = arr;
+	}
+}

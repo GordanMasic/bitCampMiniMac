@@ -1,0 +1,29 @@
+
+public class Trip {
+
+	private Place from;
+	private Place to;
+	
+	public Trip(Place from, Place to) {
+		this.from = from;
+		this.to = to;
+	}
+
+	public Place getFrom() {
+		return from;
+	}
+
+	public Place getTo() {
+		return to;
+	}
+
+	public void setFrom(Place from) {
+		this.from = from;
+	}
+
+	public void setTo(Place to) {
+		this.to = to;
+	}
+	
+	
+}

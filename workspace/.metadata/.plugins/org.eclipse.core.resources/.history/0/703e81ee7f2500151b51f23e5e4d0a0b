@@ -1,0 +1,12 @@
+package ba.bitcamp.bookStore;
+
+import java.util.ArrayList;
+
+import ba.bitcamp.bookClass.Book;
+
+public class BookStore {
+
+	private ArrayList<Book> books= new ArrayList<Book>();
+	
+	
+}

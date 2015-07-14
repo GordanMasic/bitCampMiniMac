@@ -1,4 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;ThreeGetMax&apos;" deleteContents="false" description="Delete resource &apos;ThreeGetMax&apos;" element1="/ThreeGetMax" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1433775279823"/>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;ThreeGetMax&apos;" deleteContents="false" description="Delete resource &apos;ThreeGetMax&apos;" element1="/ThreeGetMax" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1433775279823"/>&#x0A;<refactoring comment="Rename Java project &apos;VjeybeW4D5&apos; to &apos;VjezbeW4D5&apos;&#x0A;- Original element: &apos;VjeybeW4D5&apos;&#x0A;- Renamed element: &apos;VjeybeW4D5&apos;&#x0A;- Update references to refactored element" description="Rename Java project &apos;VjeybeW4D5&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=VjeybeW4D5" name="VjezbeW4D5" references="true" stamp="1434098724391" version="1.0"/>
 </session>

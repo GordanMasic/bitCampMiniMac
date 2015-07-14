@@ -1,0 +1,24 @@
+package ba.bitcamp.gordan;
+
+import java.util.Arrays;
+
+public class Task3_StudentGrades {
+
+	public static void main(String[] args) {
+		String[] array = gradeFromSubjects();
+		System.out.println(Arrays.toString(array));
+	}
+	
+	public static String[] gradeFromSubjects(){
+		TextIO.readFile("src/ba/bitcamp/gordan/grades.in");
+		String gradesOneStudents = TextIO.getln();
+		String[] array = new String[gradesOneStudents.length()/2+1];
+		int j = 0;
+		for (int i = 0; i < array.length; i++) {
+			array[i] = ""+gradesOneStudents.charAt(j);
+			j+=2;
+		}
+		TextIO.readStandardInput();
+		return array;
+	}
+}

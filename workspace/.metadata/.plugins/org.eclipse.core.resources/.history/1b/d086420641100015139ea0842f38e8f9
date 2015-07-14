@@ -1,0 +1,96 @@
+package ba.bitcamp.gordan;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class MatrixHelper {
+
+	/**
+	 * Prints 2D matrix
+	 * 
+	 * @param array
+	 *            - matrix we want to print
+	 * @param column
+	 *            - number of columns in matrix
+	 * 
+	 * @throws InputMismatchException
+	 */
+	public static void print2DArray(String[][] array) {
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array[i].length; j++) {
+				System.out.print(array[i][j] + "\t");
+
+				if (j == array[i].length-1) {
+					System.out.print("\n");
+				}
+			}
+		}
+	}
+
+	/**
+	 * Returns column that user chooses
+	 * 
+	 * @param array
+	 *            - matrix whose column user chooses
+	 * @param column
+	 *            - index of column that user chooses
+	 * @return oneColumn - column that user chooses as array
+	 * 
+	 * @throws InputMismatchException
+	 * @throws IndexOutOfBoundsException
+	 */
+	public static int[] getColumn(int[][] array, int column) {
+		int[] oneColumn = new int[array.length];
+		for (int i = 0; i < array.length; i++) {
+			oneColumn[i] = array[i][column];
+		}
+		return oneColumn;
+	}
+	/**
+	 * Lets user to input dimensions of matrix and input all elements by himself
+	 * @return matrix - matrix that user made
+	 * 
+	 */
+	public static int[][] fillMatrix() {
+		Scanner in = new Scanner(System.in);
+		// User defines number of rows
+		System.out.print("Insert number of rows: ");
+		int row = in.nextInt();
+
+		// User defines number of columns
+		System.out.print("Insert number of columns: ");
+		int column = in.nextInt();
+
+		// Creating empty matrix with dimensions rows x columns
+		int[][] matrix = new int[row][column];
+
+		// With loop user inserts numbers in every element of matrix
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix[i].length; j++) {
+				System.out.printf("Insert element at indexes [%d] [%d]: ", i,
+						j, "\n");
+				matrix[i][j] = in.nextInt();
+			}
+		}
+		in.close();
+
+		return matrix;
+	}
+	/**
+	 * Returns true if singular or false if not singular 3x3 matrix
+	 * @param matrix - <b>int[][]</b>
+	 * @return boolean
+	 */
+	public static boolean isSingular(int[][] matrix){
+		int determinant;
+				
+		determinant = matrix[0][0]*matrix[1][1]*matrix[2][2] + matrix[0][1]*matrix[1][2]*matrix[2][0] + matrix[0][2]*matrix[1][0]*matrix[2][1];
+		determinant += -matrix[2][0]*matrix[1][1]*matrix[0][2] - matrix[2][1]*matrix[1][2]*matrix[0][0] - matrix[2][2]*matrix[1][0]*matrix[0][2];
+		
+		if (determinant == 0){
+			return true;
+		}else{
+			return false;
+		}
+	}
+}

@@ -1,0 +1,55 @@
+import java.util.Arrays;
+
+public class SortArray {
+
+	public static void main(String[] args) {
+
+		int arraySize = 100;
+		int[] array = new int[arraySize];
+
+		for (int i = 0; i < array.length; i++) {
+			array[i] = (int) (Math.random() * (3*arraySize-1) + 1);
+		}
+
+		System.out.println(Arrays.toString(array));
+		
+		Arrays.sort(array);
+
+		System.out.println(Arrays.toString(array));
+		
+		System.out.println(search(array, 30));
+
+	}
+
+	public static void sortArray(int[] array) {
+		// for (int j = 0; j < array.length; j++) {
+		boolean sorted = false;
+		while (!sorted) {
+			sorted = true;
+			for (int i = 0; i < array.length - 1; i++) {
+				if (array[i] > array[i + 1]) {
+					sorted = false;
+					int temp = array[i];
+					array[i] = array[i + 1];
+					array[i + 1] = temp;
+				}
+			}
+		}
+
+	}
+
+	public static int search(int[] array, int number){
+		int temp = array.length -1;
+		while(temp >= 0 && temp <= array.length -1){
+			if(number > array[temp]){
+				temp += temp/2;
+			}else if(number < array[temp]){
+				temp /= 2;
+			}else{
+				return temp;
+			}
+		}
+		return -1;
+		
+	}
+}

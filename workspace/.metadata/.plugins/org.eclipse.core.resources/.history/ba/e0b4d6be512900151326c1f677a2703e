@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Trip {
+
+	private Place start;
+	
+	
+	public void addPlace(Place e){
+		this.start = e;
+	}
+	
+	
+	public String toString(){
+		return String.format("%s", start);
+	}
+	
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("Unesite pocetnu destinaciju: ");
+		Place start = new Place(in.nextLine());
+		Trip holidayTrip = new Trip();
+		System.out.println("Unesite imena gradova koje zelit obici: ");
+		Place last = start;
+		while(true){
+			String name = in.nextLine();
+			if(!name.equals("")){
+				Place newPlace = new Place(name);
+				last.setNext(newPlace);	
+			}else{
+				break;
+			}
+		}
+		
+	
+	Place currentPlace = start;
+	while(currentPlace != null){
+		holidayTrip.addPlace(currentPlace);
+		System.out.println("Vase putovanje ima slijedece destinacije: "
+				+ currentPlace.getName());
+		currentPlace = currentPlace.getNext();
+	}
+	
+			
+	
+	}
+}

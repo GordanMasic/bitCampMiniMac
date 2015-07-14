@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;ba.bitcamp.pogodi.broj.PogodiBroj.Game()&apos; to &apos;playGame&apos;&#x0A;- Original project: &apos;PredavanjeW5D5&apos;&#x0A;- Original element: &apos;ba.bitcamp.pogodi.broj.PogodiBroj.Game()&apos;&#x0A;- Renamed element: &apos;ba.bitcamp.pogodi.broj.PogodiBroj.playGame()&apos;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;Game&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;ba.bitcamp.pogodi.broj{PogodiBroj.java[PogodiBroj~Game" name="playGame" references="true" stamp="1434705646708" version="1.0"/>
+</session>

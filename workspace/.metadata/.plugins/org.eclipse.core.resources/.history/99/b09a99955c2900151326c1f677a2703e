@@ -1,0 +1,20 @@
+package ba.bitcamp.ArrayList;
+
+public class ArrayListSong {
+	
+	private Song[] songs;
+	
+	public ArrayListSong(){
+		this.songs = new Song[0];
+	}
+	
+	
+	public boolean equals(ArrayListSong other){
+		for (int i = 0; i < songs.length; i++) {
+			if(!songs[i].equals(other.songs[i])){
+				return false;
+			}
+		}
+		return true;
+	}
+}

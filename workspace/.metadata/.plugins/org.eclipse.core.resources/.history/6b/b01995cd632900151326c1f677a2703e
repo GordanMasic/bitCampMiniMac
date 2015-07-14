@@ -1,0 +1,104 @@
+package ba.bitcamp.ArrayList;
+
+import java.util.Arrays;
+
+public class ArrayListSong {
+
+	private Song[] songs;
+
+	public ArrayListSong() {
+		this.songs = new Song[0];
+	}
+
+	public ArrayListSong(Song[] songs) {
+		this.songs = new Song[songs.length];
+		for (int i = 0; i < songs.length; i++) {
+			songs[i] = songs[i];
+		}
+	}
+
+	public void addSong(Song song) {
+		int counter = 0;
+		Song[] temp;
+		for (int i = 0; i < songs.length; i++) {
+			if (!songs[i].equals(null)) {
+				counter++;
+			}
+		}
+		if (counter == songs.length) {
+			temp = new Song[songs.length];
+		} else {
+			temp = new Song[songs.length];
+		}
+		for (int i = 0; i < songs.length; i++) {
+			temp[i] = songs[i];
+		}
+		temp[songs.length] = song;
+
+		songs = temp;
+	}
+
+	public Song getSong(int index) {
+		return songs[index];
+	}
+
+	public void removeSong(Song song) {
+		Song[] temp = new Song[songs.length - 1];
+		Integer index = null;
+		for (int i = 0; i < songs.length; i++) {
+			if (song.equals(songs[i])) {
+				index = i;
+				break;
+			}
+		}
+		if (index != null) {
+			for (int i = 0; i < temp.length; i++) {
+				temp[i] = songs[i];
+			}
+			for (int i = index + 1; i < songs.length; i++) {
+				temp[i - 1] = songs[i];
+			}
+			songs = temp;
+		} else {
+
+		}
+
+	}
+
+	public int listSize() {
+		return songs.length;
+	}
+
+	public int indexOf(Song song) {
+		for (int i = 0; i < songs.length; i++) {
+			if (song.equals(songs[i])) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
+	public void removeSong(int index) {
+		Song[] temp = new Song[songs.length - 1];
+		for (int i = 0; i < temp.length; i++) {
+			temp[i] = songs[i];
+		}
+		for (int i = index + 1; i < songs.length; i++) {
+			temp[i - 1] = songs[i];
+		}
+		songs = temp;
+	}
+
+	public boolean equals(ArrayListSong other) {
+		for (int i = 0; i < songs.length; i++) {
+			if (!songs[i].equals(other.songs[i])) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public String toString() {
+		return Arrays.toString(songs);
+	}
+}

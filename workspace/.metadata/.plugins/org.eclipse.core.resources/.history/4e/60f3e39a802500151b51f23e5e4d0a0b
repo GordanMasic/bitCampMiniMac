@@ -1,0 +1,32 @@
+package ba.bitcamp.bookStore;
+
+import java.util.ArrayList;
+
+import ba.bitcamp.bookClass.Book;
+
+public class BookStore {
+
+	private ArrayList<Book> books= new ArrayList<Book>();
+	
+	
+	
+	public BookStore(ArrayList<Book> books) {
+		this.books = books;
+	}
+
+
+
+	public void addBookToStore(Book b){
+		int counter = 0;
+		for (int i = 0; i < books.size(); i++) {
+			if(b.equals(books.get(i))){
+				counter++;
+			}
+		}
+		if(counter > 0){
+			System.out.println("That book is already in store!");
+		}else{
+			books.add(b);
+		}
+	}
+}

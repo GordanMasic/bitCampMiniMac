@@ -1,0 +1,31 @@
+package ba.bitcamp.ArrayList;
+
+import java.util.Arrays;
+
+public class ArrayListSong {
+
+	private Song[] songs;
+
+	public ArrayListSong() {
+		this.songs = new Song[0];
+	}
+	
+	public ArrayListSong(Song[] songs){
+		for (int i = 0; i < songs.length; i++) {
+			this.songs[i] = songs[i];
+		}
+	}
+
+	public boolean equals(ArrayListSong other) {
+		for (int i = 0; i < songs.length; i++) {
+			if (!songs[i].equals(other.songs[i])) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public String toString() {
+		return Arrays.toString(songs);
+	}
+}

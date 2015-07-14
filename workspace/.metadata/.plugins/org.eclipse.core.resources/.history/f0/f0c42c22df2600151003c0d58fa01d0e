@@ -1,0 +1,131 @@
+package ba.bitcamp.vjezbeW8D4;
+
+public class Employee {
+
+	private int iD;
+	private String name;
+	private String lastName;
+	private String gender;
+	private double salary;
+	private Birth birth;
+
+	private static int counter = 1001;
+
+	public Employee(String name, String lastName, String gender, double salary,
+			int day, int month, int year) {
+		super();
+		this.iD = counter++;
+		this.name = name;
+		this.lastName = lastName;
+		this.gender = gender;
+		this.salary = salary;
+		this.birth = new Birth(day, month, year);
+	}
+
+	public Employee() {
+		this("UNKNOWN", "UNKNOWN", "UNKNOWN", 0, 0, 0, 0);
+	}
+
+	public int getiD() {
+		return iD;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public Birth getBirth() {
+		return birth;
+	}
+
+	public boolean equals(Employee other) {
+		if (iD == other.iD && name.equals(other.name)
+				&& lastName.equals(other.lastName)
+				&& gender.equals(other.gender) && salary == other.salary
+				&& birth.equals(other.birth)) {
+			return true;
+		}
+		return false;
+	}
+
+	public String toString() {
+		return String.format("\"%s %s\" [%s] (%f) %s", name, lastName, gender,
+				salary, birth.toString());
+	}
+
+	/**
+	 * Inner class for date of birth
+	 * 
+	 * @author gordan.masic
+	 *
+	 */
+	class Birth {
+
+		private int day;
+		private int month;
+		private int year;
+
+		public int getDay() {
+			return day;
+		}
+
+		public int getMonth() {
+			return month;
+		}
+
+		public int getYear() {
+			return year;
+		}
+		
+		public double getSalary() {
+			return salary;
+		}
+
+		/**
+		 * Constructor for creating date of birth
+		 * 
+		 * @param day
+		 *            day of birth
+		 * @param month
+		 *            month of birth
+		 * @param year
+		 *            year of birth
+		 */
+		public Birth(int day, int month, int year) {
+			this.day = day;
+			this.month = month;
+			this.year = year;
+		}
+
+		public boolean equals(Birth other) {
+			if (day == other.day && month == other.month && year == other.year) {
+				return true;
+			}
+			return false;
+		}
+
+		public String toString() {
+			return String.format("{%d.%d.%d.}", day, month, year);
+		}
+	}
+}
