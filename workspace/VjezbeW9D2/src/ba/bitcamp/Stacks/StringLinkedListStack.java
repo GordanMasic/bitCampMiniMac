@@ -40,26 +40,26 @@ public class StringLinkedListStack {
 		if (start == null) {
 			return null;
 		} else {
-			
+
 			return start.word;
 		}
 	}
-	
-	public int search(String word){
-		if(start == null){
+
+	public int search(String word) {
+		if (start == null) {
 			throw new EmptyStackException();
-		}else{
-			Node temp = start;
-			int index = 0;
-			while(temp.next != null){
-				index++;
-				if(temp.word.equals(word)){
-					return index;
-				}
-				temp = temp.next;
-			}
-			return -1;
 		}
+		Node temp = start;
+		int index = 1;
+		do {
+			if (temp.word.equals(word)) {
+				return index;
+			}
+			index++;
+			temp = temp.next;
+
+		} while (temp != null);
+		return -1;
 	}
 
 	public String toString() {
@@ -70,7 +70,6 @@ public class StringLinkedListStack {
 
 		String word;
 		Node next;
-		
 
 		public Node(String word) {
 			this.word = word;
@@ -90,19 +89,19 @@ public class StringLinkedListStack {
 		StringLinkedListStack stack = new StringLinkedListStack();
 
 		System.out.println(stack.isEmpty());
-		
+
 		double startTime = System.currentTimeMillis();
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 1; i <= 10; i++) {
 			stack.push("" + i);
 		}
 		double endTime = System.currentTimeMillis();
 		System.out.println();
-		System.out.println("Time: " +(endTime - startTime));
-		// System.out.println(stack.isEmpty());
-		// System.out.println(stack.search("2"));
-		// System.out.println(stack);
-		 System.out.println(stack.pop());
-		 System.out.println(stack);
-		// System.out.println(stack.peek());
+		System.out.println("Time: " + (endTime - startTime));
+		System.out.println(stack.isEmpty());
+		System.out.println(stack.search("10"));
+		System.out.println(stack);
+		System.out.println(stack.pop());
+		System.out.println(stack);
+		System.out.println(stack.peek());
 	}
 }

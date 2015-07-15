@@ -1,40 +1,74 @@
 package ba.bitcamp.Queues;
 
 import java.util.Arrays;
+import java.util.NoSuchElementException;
 
 public class DoubleQueueArray {
 
-	private double[] array;
+	private Double[] array;
 
 	public DoubleQueueArray() {
-		this.array = new double[0];
+		this.array = new Double[0];
 	}
 
-	public double push(double s) {
+	public boolean add(Double s) {
 		array = Arrays.copyOf(array, array.length + 1);
 		array[array.length - 1] = s;
-		return s;
+		return true;
 
 	}
 
-	public double pop() {
-		double s = array[0];
+	public Double poll() {
+		Double s = array[0];
 		array = Arrays.copyOf(Arrays.copyOfRange(array, 1, array.length),
 				array.length - 1);
 		return s;
 	}
 
-	public double peek() {
+	public Double peek() {
 		return array[0];
 	}
 
-	public int search(double s) {
+	public int search(Double s) {
 		for (int i = 0; i < array.length; i++) {
-			if (s == array[i]) {
-				return i;
+			if (s.compareTo(array[i]) == 0) {
+				return i + 1;
 			}
 		}
 		return -1;
+	}
+
+	public boolean offer(Double s) {
+		try {
+			array = Arrays.copyOf(array, array.length + 1);
+			array[array.length - 1] = s;
+			return true;
+		} catch (NullPointerException e1) {
+			return false;
+		} catch (ClassCastException e2) {
+			return false;
+		} catch (IllegalArgumentException e3) {
+			return false;
+		}
+	}
+
+	public Double remove() {
+		try {
+			Double s = array[0];
+			array = Arrays.copyOf(Arrays.copyOfRange(array, 1, array.length),
+					array.length - 1);
+			return s;
+		} catch (NoSuchElementException e) {
+			return null;
+		}
+	}
+
+	public Double element() {
+		if (array == null) {
+			throw new NoSuchElementException();
+		} else {
+			return array[0];
+		}
 	}
 
 	public boolean isEmpty() {
@@ -48,13 +82,16 @@ public class DoubleQueueArray {
 	public static void main(String[] args) {
 
 		DoubleQueueArray que = new DoubleQueueArray();
-
+		System.out.println(que.isEmpty());
 		for (int i = 0; i < 10; i++) {
-			que.push(i);
+			que.add(i + 0.0);
 		}
+		System.out.println(que.isEmpty());
+		System.out.println(que);
+		System.out.println(que.poll());
+		System.out.println(que);
+		System.out.println(que.search(19.0));
+		System.out.println(que);
 
-		System.out.println(que);
-		System.out.println(que.pop());
-		System.out.println(que);
 	}
 }
