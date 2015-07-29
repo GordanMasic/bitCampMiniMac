@@ -1,0 +1,4 @@
+Ovo je neki file 
+koji treba da dobije svaki 
+client koji se connectuje na 
+obicni server.
